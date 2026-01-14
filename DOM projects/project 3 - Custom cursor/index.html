@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motivational Wallpaper</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        cursor: none;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .main {
+        background: #000000;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .text {
+        color: white;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .subtitle {
+        color: white;
+        font-size: 6rem;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 25px;
+      }
+
+      .top-left {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.4;
+        opacity: 0.9;
+        letter-spacing: 10px;
+        max-width: 600px;
+      }
+
+      .quote {
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 300;
+        text-align: right;
+        line-height: 1.4;
+        letter-spacing: 10px;
+        opacity: 0.9;
+        max-width: 400px;
+      }
+
+      .crsr {
+        width: 20px;
+        height: 20px;
+        background: white;
+        position: absolute;
+        mix-blend-mode: difference;
+        pointer-events: none;
+        z-index: 9999;
+        border-radius: 50%;
+        transition: all 0.1s ease;
+      }
+
+      .click-effect {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border: 3px solid white;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        opacity: 0.8;
+        animation: click-animate 0.6s forwards;
+      }
+
+      @keyframes click-animate {
+        to {
+          transform: scale(3);
+          opacity: 0;
+        }
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .text {
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+        }
+        .subtitle {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .text {
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+        .top-left {
+          font-size: 1rem;
+          top: 1rem;
+          left: 1rem;
+          right: 1rem;
+        }
+        .quote {
+          font-size: 0.8rem;
+          bottom: 1rem;
+          right: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top-left">"Time to unlock your potential"</div>
+
+      <div>
+        <div class="subtitle">Welcome Back...</div>
+      </div>
+      <div class="quote">"Make today amazing"</div>
+      <div class="crsr"></div>
+    </div>
+
+    <script>
+      let crsr = document.querySelector(".crsr");
+
+      window.addEventListener("mousemove", function (dets) {
+        crsr.style.left = dets.x - 10 + "px";
+        crsr.style.top = dets.y - 10 + "px";
+      });
+
+      window.addEventListener("click", function (dets) {
+        let effect = document.createElement("div");
+        effect.className = "click-effect";
+        effect.style.left = dets.x - 20 + "px";
+        effect.style.top = dets.y - 20 + "px";
+        document.body.appendChild(effect);
+        effect.addEventListener("animationend", function () {
+          effect.remove();
+        });
+      });
+    </script>
+  </body>
+</html>
