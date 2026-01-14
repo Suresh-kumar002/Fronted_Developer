@@ -1,0 +1,254 @@
+console.log(
+  "---------------------------------DAY 45--------------------------------"
+);
+// ------------------------ Templet Retrals ----------------------------------
+
+let pen1_Price = 10;
+let pen2_Price = 20;
+// let output = "The total price is : " + (pen1_Price + pen2_Price) + " Rupess.";
+let output = `The total price is : ${pen1_Price + pen2_Price} Rupess.`;
+// back tik
+console.log(output);
+
+// --------------------- Arithmetic Operator ------------------------------
+
+let a = 10;
+let b = 2;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+console.log(a ** b);
+
+//----------------------- Uinary Operator ------------------------------------
+
+console.log(a++); //10
+console.log(a++); //11
+console.log(++a); //13
+
+// --------------------- Conditional Statement ------------------------------
+
+//  1. --------> Traffic Light System
+
+let color = "yellow";
+
+if (color == "red") {
+  console.log("STOP... it's RED");
+}
+if (color == "yellow") {
+  console.log("SLOW DOWN... it's YELLOW");
+}
+if (color == "green") {
+  console.log("YOU CAN GO NOW... it's GREEN");
+}
+
+// 2. ------------>  Popcorn price checker Based on size
+
+let popCornSize = "xl";
+
+if (popCornSize === "xl") {
+  console.log("popcorn pirce is : 250");
+} else if (popCornSize === "l") {
+  console.log("popcorn pirce is : 200");
+} else if (popCornSize === "m") {
+  console.log("popcorn pirce is : 150");
+} else if (popCornSize === "s") {
+  console.log("popcorn pirce is : 100");
+} else {
+  console.log("sorry u are choosing wrong size popcorn");
+}
+
+console.log(
+  "------------------------DAY 46----------------------------------------"
+);
+
+//  QS. a "good string " is a string that start with letter A and length is >(greater then) 3. write a program that find the good string and bad string...
+
+let str = "apple";
+
+if (str.length > 3 && str[0] === ("a" || "A")) {
+  console.log(`The string ${str} is Good string`);
+} else {
+  console.log(`The string ${str} is Bad string`);
+}
+
+// QS. practice Ques-
+
+let num = 12;
+if (num % 3 === 0 && (num + 1 == 15 || num - 1 == 11)) {
+  console.log("Safe");
+} else {
+  console.log("Unsafe");
+}
+
+// switch statement Qs.
+
+let day = 5;
+
+switch (day) {
+  case 1:
+    console.log("Mon");
+    break;
+  case 2:
+    console.log("Tues");
+    break;
+  case 3:
+    console.log("Wensd");
+    break;
+  case 4:
+    console.log("Thrs");
+    break;
+  case 5:
+    console.log("Fri");
+    break;
+  case 6:
+    console.log("Sat");
+    break;
+  case 7:
+    console.log("Sun");
+    break;
+  default:
+    console.log(
+      `There are only 7 day in a week & you want day ${day} is not possible! sorry..`
+    );
+    break;
+}
+
+// Alert and Prompt
+
+let fName = prompt("Enter 1st Name: ");
+let sName = prompt("Enter 2nd Name: ");
+console.log(`${fName} ${sName}`);
+
+let n1 = 32;
+let n2 = 47552;
+if (n1 % 10 == n2 % 10) {
+  console.log("last digit are same");
+} else {
+  console.log("last digit is not same");
+}
+
+console.log(
+  "------------------------DAY 47----------------------------------------"
+);
+
+let password = prompt("Enter your password");
+console.log(`your passwor is :${password.toLowerCase().trim()}`);
+console.log("index of _ is : ", password.indexOf("_"));
+
+console.log(
+  "------------------------DAY 48----------------------------------------"
+);
+let msg = "ilovecoding";
+console.log(msg.trim().toUpperCase());
+console.log(msg.indexOf("co"));
+
+//array
+
+let student = [10, 20, 30, 40, "vedant"];
+console.log(student);
+
+console.log(
+  "------------------------DAY 49----------------------------------------"
+);
+
+// let student = [10, 20, 30, 40, "vedant"];
+
+undefined;
+console.log(student);
+VM75: 1(5)[(10, 20, 30, 40, "vedant")];
+undefined;
+let stud = [10, 20, 30, 40, "vedant"];
+
+student.concat(stud);
+(10)[(10, 20, 30, 40, "vedant", 10, 20, 30, 40, "vedant")];
+console.log(student.indexOf("vedant"));
+
+console.log(stud.reverse());
+VM201: 1(5)[("vedant", 40, 30, 20, 10)];
+
+console.log(stud.slice(3));
+console.log(stud.slice(3, 5));
+VM460: 1(2)[(20, 10)];
+console.log(stud.slice(2, 6));
+VM491: 1(3)[(30, 20, 10)];
+console.log(stud.slice(-2));
+VM562: 1(2)[(20, 10)];
+console.log(stud.slice(-6));
+
+console.log(stud.splice(4));
+VM614: (1)[10];
+undefined;
+console.log(stud.splice(2, 2));
+VM635: 1(2)[(30, 20)];
+undefined;
+console.log(stud.splice(1, 3, "red", 124, "blue"));
+VM696: (1)[40];
+undefined;
+
+stud(4)[("vedant", "red", 124, "blue")];
+let month = ["june", "aug", "feb", "jan"];
+
+undefined;
+console.log(month.spl);
+undefined;
+console.log(month.splice(1, 2, "may", "june"));
+VM989: 1(2)[("aug", "feb")];
+undefined;
+month(4)[("june", "may", "june", "jan")];
+console.log(month.splice(0, 2, "may", "june"));
+VM1025: 1(2)[("june", "may")];
+undefined;
+month(4)[("may", "june", "june", "jan")];
+let months = ["june", "aug", "feb", "jan"];
+
+undefined;
+months(4)[("june", "aug", "feb", "jan")];
+console.log(months.splice(0, 2, "may", "june"));
+VM1075: 1(2)[("june", "aug")];
+undefined;
+months(4)[("may", "june", "feb", "jan")];
+
+let lang = ["c", "c++", "java", "javascript", "php", "c#"];
+
+undefined;
+lang.reverse();
+(6)[("c#", "php", "javascript", "java", "c++", "c")];
+lang.indexOf("javascript");
+2;
+console.log(lang.reverse().indexOf("javascript"));
+
+undefined;
+lang.unshift("sql");
+7;
+lang.reverse();
+(7)[("c#", "php", "javascript", "java", "c++", "c", "sql")];
+console.log(lang.reverse().indexOf("sql"));
+
+const post1 = {
+  username: "vedant",
+  content: "I love coding",
+  likes: 100,
+  repost: 10,
+  comments: ["good", "bad", "average"],
+  shares: 100,
+  views: 1000,
+  tags: ["coding", "programming", "javascript"],
+  isLiked: true,
+  isReposted: true,
+  isCommented: true,
+};
+
+post.post_Number = 1;
+
+post1.post_Names = {
+  post1: "vedant",
+  post2: "vedant",
+  post3: "vedant",
+  post4: "vedant",
+  post5: "vedant",
+  post6: "vedant",
+  post7: "vedant",
+  post8: "vedant",
+};
